@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://us.123rf.com/450wm/goodlogo/goodlogo2211/goodlogo221100227/194413829-tropical-island-palms-logo-beach-travel-retro-postcard-sea-sand-ocean-summer-vacation-sunset.jpg?ver=6" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+<style>
+*{ margin: 0;padding: 0;box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+ul{
+    list-style: none;
+}
+body , html{
+    overflow-x: hidden;
+}
+/* navbar */
+.navbar{
+display: flex;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+justify-content: space-between;
+padding: 20px;
+color: whitesmoke;
+/* background-color: black; */
+}
+.nav-links{
+    display: flex;
+    align-items: center ;
+}
+.nav-links li{
+    margin: 0 20px;
+}
+.nav-links a{
+    font-size:3vmin;
+}
+
+.logo{
+    width: 15vmin;
+    height: auto;
+}
+
+header{
+width: 100vw;height: 100vh;
+background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.6)),url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701920429.jpg");
+background-position: center;
+background-size: cover;
+display: flex;
+align-items: flex-end;
+justify-content: center;
+}
+.header-content{
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+.header-content h2{
+    font-size: 4vmin;
+}
+.header-content h1{
+    font-size: 6vmin;
+    margin: 30px 0 20px 0;
+}
+.line{
+    width: 190px;
+    height: 4px;
+    background-color: rgb(181, 38, 22);
+    margin: 10px auto;
+    border-radius: 10px;
+}
+.ctn{
+    padding: 8px 15px;
+    background-color: rgb(181, 38, 22);
+    border-radius: 30px;
+    color: whitesmoke;
+}
+.menu-btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+    display: none;
+}
+
+/* Events */
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: rgb(11, 11, 36);
+}
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.row .col img{
+    width: 80%;
+}
+.row .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.events .row{
+    margin-top: 50px;
+}
+h4{
+    font-size: 3vmin;
+    color: rgb(11, 11, 36);
+    margin: 20px auto;
+}
+P{
+    color: rgb(11, 11, 36);
+    text-align: center; 
+    padding: 0 40px;
+}
+.events .ctn{
+    margin-top: 20px;
+}
+.explore{
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://wallpapercave.com/dwp1x/zHPSVMN.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items: center;
+}
+.explore-content{
+    width: 60%;
+    padding: 50px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.explore-content h1{
+    font-size: 5vmin;
+    margin: 0 0 20px 0;
+}
+.explore-content p{
+    margin-top: 20px;
+    color: whitesmoke;
+    font-weight: 800;
+}
+.explore-content .ctn{
+    margin-top: 30px;
+}
+
+ 
+.content-col{
+    width: 40%;
+}
+.image-col{
+    width: 60%;
+}
+.tours .image-gallery {
+display: flex;
+flex-wrap: wrap ;
+width: 100%;
+/* justify-content: center; */
+align-items: center;
+}
+.tours .row .image-gallery img {
+    max-width: 300px;
+    height: 250px ;
+    margin: 10px;
+}
+.content-col h1{
+    font-size: 5vmin;
+    color:  rgb(11, 11, 36);
+    
+}
+.content-col .line{
+   margin:20px 0 0 0  ; 
+}
+.content-col p{
+    padding: 0;
+    margin: 30px auto;
+}
+.footer{
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 80px;
+    margin: 0;
+    background-color: rgb(11, 11, 36) ;
+    text-align: center;
+}
+.footer p{
+    color: whitesmoke;
+    margin: 20px auto;
+}
+
+/* mobile  Device */
+@media screen and (max-width:850px) {
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background-color: rgb(11, 11, 36);
+        margin-top: -1000px;
+        transition: all 0.5s ease;
+    }
+    .menu-btn{display: block;}
+    .mobile-menu{
+        margin-top: 0px;
+    }
+    .nav-links li{
+        margin: 30px auto;
+    } 
+    /* Events */
+    .row{
+        flex-direction: column;
+    }
+    .row .col{
+        margin: 20px auto;
+    }
+    .col img {
+        max-width: 90%;
+    }
+
+    /* Explore */
+    .explore-content{
+        width: 100%;
+    }
+    .tours .col{
+        width: 100%;
+    }
+    .image-gallery{
+        justify-content: center;
+        align-items: center;
+    }
+    .image-gallery img{
+        width: 90%;
+    }
+    .footer{
+        padding: 10px;
+    }
+}
+img{
+    transition: transform 0.3s ease;
+}
+img:hover{
+    transform: scale(1.04);
+}
+a:hover{
+    display: block;
+    transform: scale(1.04);}
+.ctn:hover{
+    background: whitesmoke;
+    color: rgb(176, 41, 26);
+}
+</head>
+</style>
+<body>
+    <nav class="navbar">
+        <img src="img/logo-removebg-preview__1_-removebg-preview.png" alt="logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tours</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">About</a></li>
+            <li class="
+            ctn"><a href="#">Contact</a></li>
+        </ul>
+        <img src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-menu-icon-image_1344445.jpg" alt="" class="menu-btn">
+    </nav>
+    <header>
+        <div class="header-content">
+            <h2>Explore The Colorfull World</h2>
+            <div class="line"></div>
+            <h1>A WOUNDERFULL GIFTT</h1>
+            <a href="" class="ctn">Learn more</a>
+        </div>
+    </header>
+    <!-- Events -->
+    <section class="events">
+        <div class="title">
+            <h1>Upcoming Events</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="https://imageio.forbes.com/blogs-images/johnnyjet/files/2017/10/traveling-alone.jpg?format=jpg&width=960" alt="">
+                <h4>Everest camp trek</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias id autem voluptate distinctio?</p>
+                <a href="" class="ctn">Learn more</a>
+            </div>
+            <div class="col">
+                <img src="https://www.travanya.com/wp-content/uploads/2022/01/Backpack.webp" alt="">
+                <h4>Walking Holiday</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias id autem voluptate distinctio?</p>
+                <a href="" class="ctn">Learn more</a>
+            </div>
+        </div>
+    </section>
+    <section class="explore">
+        <div class="explore-content">
+            <h1>EXPLORE THE WORLD</h1>
+            <div class="line"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates maxime reiciendis exercitationem fuga
+                labore harum molestias voluptas minus. Doloribus deleniti praesentium consequatur ex.</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </section>
+    <section class="tours">
+        <div class="row">
+            <div class="col content-col">
+                <h1>UPCOMING TOURS AND DESTINATION</h1>
+                <div class="line"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad numquam odio iusto ea sint reprehenderit, et cupiditate sequi asperiores non, a esse rerum.</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col image-col">
+                <div class="image-gallery">
+                    <img src="https://www.smartertravel.com/wp-content/uploads/2019/02/woman-traveling-norway-sightseeing.jpg" alt="">
+                    <img src="https://www.shutterstock.com/image-photo/young-asian-traveling-backpacker-khaosan-260nw-559055305.jpg" alt="">
+                    <img src="https://media.istockphoto.com/id/918576860/photo/schools-out.jpg?s=612x612&w=0&k=20&c=PYURD7drRd3GX_E_pOKv-_jzBU6SMuOH81uWuHiPK-E=" alt="">
+                    <img src="https://assets.bucketlistly.blog/sites/5adf778b6eabcc00190b75b1/content_entry5adf77af6eabcc00190b75b6/602e105cfaf273000b7b4185/files/how-to-take-good-pictures-of-yourself-main-image-op-thumb.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia maxime temporibus tempora?</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </section>
+
+
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+
+</html>
